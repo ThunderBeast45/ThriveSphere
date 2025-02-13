@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="COMP 2800 - ThriveSphere" />
+
+    <title>ThriveSphere</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/logo.svg" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/410249dbdb.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/ThriveSphere/public/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/ThriveSphere/public/css/home.css" />
+    <link rel="stylesheet" type="text/css" href="/ThriveSphere/public/css/responsive.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="navPlaceHolder"></div>
+        <header id="headMobile">
+            <nav class="nav-container">
+                <p id="footerNav">ThriveSphere 2024</p>
+
+                <div class="nav-menu" id="nav-menu">
+                    <div id="logoMob">
+                        <a href="/">
+                            <img src="../public/images/Logo.png" alt="Logo">
+                            <h2>ThriveSphere</h2>
+                        </a>
+                    </div>
+
+                    <i class="bi bi-x nav-close" id="nav-close"></i>
+
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">
+                                <i class="bi bi-house-door nav-icon"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/ThriveSphere/html/therapists.html" class="nav-link">
+                                <i class="fa-solid fa-heart-pulse nav-icon"></i>Therapists
+                            </a>
+                        </li>
+                        <li class="nav-item isPatient">
+                            <a href="/ThriveSphere/html/checkout.html" class="nav-link">
+                                <i class="bi bi-bag-check nav-icon"></i>Checkout
+                            </a>
+                        </li>
+                        <li class="nav-item isPatient">
+                            <a href="/ThriveSphere/html/order-history.html" class="nav-link">
+                                <i class="bi bi-clock-history nav-icon"></i>Order History
+                            </a>
+                        </li>
+                        <li class="nav-item isAdmin">
+                            <a href="/ThriveSphere/html/admin-dashboard.html" class="nav-link">
+                                <i class="fa-solid fa-users-gear nav-icon"></i>Admin Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item hasActiveSession">
+                            <a href="/ThriveSphere/html/chat-session.html" class="nav-link">
+                                <i class="bi bi-chat-left-dots nav-icon"></i>Chat Session
+                            </a>
+                        </li>
+                        <li class="nav-item isTherapist">
+                            <a href="/ThriveSphere/html/my-patients.html" class="nav-link">
+                                <i class="bi bi-people nav-icon"></i>My Patients
+                            </a>
+                        </li>
+                        <li class="nav-item isLoggedIn">
+                            <a href="/ThriveSphere/html/userprofile.html" class="nav-link">
+                                <i class="bi bi-person-circle nav-icon"></i>Account
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/#contactSec" class="nav-link">
+                                <i class="bi bi-info-circle nav-icon"></i>Contact
+                            </a>
+                        </li>
+                        <li class="nav-item isLoggedOut">
+                            <a href="/ThriveSphere/public/js/login.js" class="nav-link">
+                                <i class="bi bi-box-arrow-in-right nav-icon"></i>Login
+                            </a>
+                        </li>
+                        <li class="nav-item isLoggedIn">
+                            <a href="#" class="nav-link logout-link">
+                                <i class="bi bi-box-arrow-left nav-icon"></i>Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-btns">
+                    <div class="nav-toggle" id="nav-toggle">
+                        <i class="bi bi-grid"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="bannerHome">
+            <div id="overlay">
+                <div id="homeHeader">
+                    <h2>Gentle paths to inner peace</h2>
+                    <div><a href="/ThriveSphere/public/js/therapists.js">View Therapists</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="therapySec">
+            <h2>Popular Therapy Sessions</h2>
+            <div id="therapistCards">
+            </div>
+        </div>
+
+        <div id="companySec">
+            <div>
+                <img src="/ThriveSphere/public/images/home.jpg" alt="Company Info">
+            </div>
+            <div id="companyDesc">
+                <h2>ThriveSphere Can Help You</h2>
+                <p>ThriveSphere can help anyone that struggles with mental health problems with guided therapy sessions.</p>
+                <p>Although therapy in India is available, it is not cheap and fees can range from Rs1000-Rs2500 per
+                    session. Many people with mental health problems require 12-16 sessions on average and only 50
+                    percent of patients recover as indicated by self-reported symptom measures.</p>
+            </div>
+        </div>
+
+        <div id="contactSec">
+            <div id="contactContainer">
+                <div id="contactInfo">
+                    <h4>Contact Details</h4>
+                    <h2>Devesh Ambekar</h2>
+                    <p>Pune, Maharashtra</p>
+                    <div class="contactDetails">
+                        <div class="contactIcons">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <a href="mailto:info@soulsync.com">info@ThriveSphere.com</a>
+                    </div>
+                    <div class="contactDetails">
+                        <div class="contactIcons">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <a href="tel:9975811244">9975811244</a>
+                    </div>
+                </div>
+                <div id="mapSec">
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.7693890392484!2d73.8261929!3d18.4487769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2be933201c149%3A0x1c055d83993ff72b!2sZeal%20College%20of%20Engineering%20and%20Research!5e0!3m2!1sen!2sin!4v1737535728814!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Expired Modal -->
+        <div id="chatExpiredModal">
+            <div id="modalContent">
+                <div id="chatExpiredModalMessage">
+                    <h2>Your session has expired!</h2>
+                    <p>Purchase a new session at <a href="/ThriveSphere/html/therapists.html">Therapists</a> to continue your journey.</p>
+                </div>
+                <i class="fa-solid fa-xmark" id="closeChatExpired"></i>
+            </div>
+        </div>
+
+        <div id="therapistChat"></div>
+        <div id="footerPlaceHolder"></div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/ThriveSphere/public/js/main.js"></script>
+    <script src="/ThriveSphere/public/js/index.js"></script>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    <script src="assets/js/mixitup.js"></script> 
+    <script src="assets/js/accordions.js"></script>
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
