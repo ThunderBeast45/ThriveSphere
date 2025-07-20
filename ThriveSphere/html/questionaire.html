@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/ThriveSphere/public/images/logo.svg">
+    <title>ThriveSphere - Mental Health Assessment</title>
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #2c3e50, #00adb5);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ffcc29;
+        }
+
+        /* Form Section */
+        .container {
+            max-width: 800px;
+            margin: 100px auto 50px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #00adb5;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(135deg, #00adb5, #ffcc29);
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #ffcc29, #00adb5);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: linear-gradient(135deg, #2c3e50, #00adb5);
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>ThriveSphere</h2>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/ThriveSphere/html/index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="/ThriveSphere/html/therapists.html" class="nav-link">Therapists</a></li>
+            <li class="nav-item"><a href="/ThriveSphere/html/questionaire.html" class="nav-link">Self Assessment</a></li>
+            <li class="nav-item"><a href="/ThriveSphere/html/order-history.html" class="nav-link">Order History</a></li>
+            <li class="nav-item"><a href="/ThriveSphere/html/userprofile.html" class="nav-link">Account</a></li>
+            <li class="nav-item"><a href="/ThriveSphere/html/login.html" class="nav-link">Sign In</a></li>
+            <li class="nav-item"><a href="#contactSec" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h3>Mental Health Assessment</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feeling">How are you feeling today?</label>
+                <textarea id="feeling" name="feeling" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Stress Level:</label>
+                <div class="radio-group">
+                    <input type="radio" id="low" name="stress-level" value="low">
+                    <label for="low">Low</label>
+
+                    <input type="radio" id="medium" name="stress-level" value="medium">
+                    <label for="medium">Medium</label>
+
+                    <input type="radio" id="high" name="stress-level" value="high">
+                    <label for="high">High</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="sleep-quality">Sleep Quality:</label>
+                <select id="sleep-quality" name="sleep-quality" required>
+                    <option value="">Select...</option>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="fair">Fair</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="coping-strategies">Coping Strategies:</label>
+                <textarea id="coping-strategies" name="coping-strategies" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Support System:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="family" name="support" value="family">
+                    <label for="family">Family</label>
+
+                    <input type="checkbox" id="friends" name="support" value="friends">
+                    <label for="friends">Friends</label>
+
+                    <input type="checkbox" id="counselor" name="support" value="counselor">
+                    <label for="counselor">Counselor</label>
+
+                    <input type="checkbox" id="other" name="support" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        ThriveSphere &copy; 2025 | All Rights Reserved
+    </footer>
+
+</body>
+</html>

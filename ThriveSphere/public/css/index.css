@@ -1,0 +1,427 @@
+
+    
+    
+
+
+    #map iframe {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    max-width: 1000px; /* Optional: Set a max-width */
+    border-radius: 10px;
+    }
+    body {
+        font-family: 'Nunito', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Nunito', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    #wrapper {
+        padding: 1rem;
+        overflow-x: auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 800px;
+    }
+    th, td {
+        text-align: left;
+        padding: 12px 15px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+    .mind-issue {
+        background-color: #e0f0ff;
+        color: #007bff;
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-right: 4px;
+        display: inline-block;
+    }
+    #patientToolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+    }
+    #searchForm input {
+        padding: 0.5rem;
+        font-size: 1rem;
+        width: 200px;
+    }
+    .action-btn {
+        padding: 5px 10px;
+        margin-right: 5px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .approve {
+        background-color: #28a745;
+        color: white;
+    }
+    .reject {
+        background-color: #dc3545;
+        color: white;
+    }
+    .avatar {
+        vertical-align: middle;
+        border-radius: 50%;
+        margin-right: 6px;
+    }
+
+    header {
+        background-color: #2c3e50;
+        padding: 15px;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin: 0 15px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+        color: #00adb5;
+    }
+
+    #bannerHome {
+        height: 400px;
+        background: url('/ThriveSphere/public/images/home.jpg') center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+    }
+
+    #overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        border-radius: 10px;
+    }
+
+    section {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    #benefitsContainer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    }
+    
+    .benefits-card {
+        width: 280px; /* Adjust width as needed */
+        padding: 20px;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .benefits-card:hover {
+        transform: scale(1.05);
+    }
+    
+    .benefits-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #therapistCards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    #companySec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 50px 10%;
+    }
+
+    #contactSec {
+        background: #e8f0fe;
+        padding: 50px 10%;
+    }
+
+    #contactContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    iframe {
+        border: none;
+        width: 100%;
+        height: 400px;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 20px;
+    }
+    
+   
+    
+   
+
+
+        #therapistCards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .therapist {
+            text-align: center;
+            width: 250px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        
+        .therapist:hover {
+            transform: scale(1.05);
+        }
+
+        .therapist img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #00adb5;
+            animation: rotate 5s infinite linear;
+        }
+
+        @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+        }
+/* Gradient Background for Header */
+header {
+    background: linear-gradient(135deg, #2c3e50, #00adb5);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Gradient for Footer */
+footer {
+    text-align: center;
+    background: linear-gradient(135deg, #2c3e50, #00adb5);
+    color: #fff;
+    padding: 20px;
+}
+
+/* Gradient Background for Sections */
+section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Benefits & Therapist Cards */
+.benefits-card, .therapist {
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
+    transition: transform 0.3s ease-in-out, background 0.5s ease-in-out;
+}
+
+/* Hover effect */
+.benefits-card:hover, .therapist:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #00adb5, #ffffff);
+}
+
+/* Navbar Links with Gradient Hover */
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffcc29;
+    text-shadow: 0px 0px 5px rgba(255, 204, 41, 0.8);
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(135deg, #00adb5, #ffcc29);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ffcc29, #00adb5);
+}
+
+/* Smooth Gradient Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+        #contactSec {
+            background: #f8f9fa;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        #contactContainer {
+            display: flex;
+            max-width: 900px;
+            width: 90%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+    
+        #contactInfo {
+            padding: 30px;
+            width: 50%;
+        }
+    
+        #contactInfo h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+    
+        #contactInfo h2 {
+            color: #007bff;
+           
+        }
+    
+        .contactDetails {
+            display: flex;
+            align-items: center;
+           
+        }
+    
+        .contactIcons i {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #007bff;
+        }
+    
+        .contactDetails a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    
+        .contactDetails a:hover {
+            color: #007bff;
+        }
+    
+        #mapSec {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 0 12px 12px 0;
+        }
+    
+        @media (max-width: 768px) {
+            #contactContainer {
+                flex-direction: column;
+            }
+    
+            #contactInfo, #mapSec {
+                width: 100%;
+                text-align: center;
+            }
+    
+            iframe {
+                border-radius: 0 0 12px 12px;
+            }
+        }
+   
+    

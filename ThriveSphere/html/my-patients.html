@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="COMP 2800 - SoulSync" />
+
+    <title>ThriveSphere - My Patients</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/ThriveSphere/public/images/logo.svg">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/410249dbdb.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+
+    <link rel="stylesheet" type="text/css" href="/ThriveSphere/public/css/index.css">
+
+    <style>
+        .mind-issue {
+            background-color: #e0f0ff;
+            color: #007bff;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 4px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>ThriveSphere</h2>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/ThriveSphere/html/index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/ThriveSphere/html/therapists.html" class="nav-link">Therapists</a></li>
+                <li class="nav-item"><a href="/ThriveSphere/html/questionaire.html" class="nav-link">Self Assessment</a></li>
+                <li class="nav-item"><a href="/ThriveSphere/html/order-history.html" class="nav-link">Order History</a></li>
+                <li class="nav-item"><a href="/ThriveSphere/html/userprofile.html" class="nav-link">Account</a></li>
+                <li class="nav-item"><a href="/ThriveSphere/html/login.html" class="nav-link">Sign In</a></li>
+                <li class="nav-item"><a href="#contactSec" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="wrapper">
+        <div id="navPlaceHolder"></div>
+
+        <div id="myPatientsHeroContainer">
+            <div id="overlay">
+                <div id="myPatientsHero">
+                    <h2>My Patients</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="noPatientsAvailable" style="display: none;">
+            <p id="noPatientsMessage">No patients have placed an order with you yet. Please wait and check your email
+                frequently for any future patients that book a session with you.</p>
+        </div>
+
+        <div id="patientToolbar">
+            <p>Results Found: <span id="boldResults"><span id="resultsFound">4</span> Patient(s)</span></p>
+            <form id="searchForm">
+                <input type="text" id="searchbar" onkeypress="return event.keyCode != 13;" onkeyup="searchTable()"
+                    placeholder="Search..." />
+            </form>
+        </div>
+
+        <div id="patientTableContainer">
+            <table id="patientTable">
+                <thead>
+                    <tr id="tableHeader">
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Date</th>
+                        <th>Price</th>
+                        <th>Mind Health Issues</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#2832</td>
+                        <td>Brooklyn Zoe</td>
+                        <td>302 Snider Street, RUTLAND, VT, 05701</td>
+                        <td>31 Jul 2020</td>
+                        <td>$64.00</td>
+                        <td><span class="mind-issue">Anxiety</span>, <span class="mind-issue">Stress</span></td>
+                        <td>
+                            <button class="action-btn approve">Approve</button>
+                            <button class="action-btn reject">Reject</button>
+                        </td>
+                    </tr>
+                    <tr class="active-row">
+                        <td>#2833</td>
+                        <td><img class="avatar" src="https://i.pravatar.cc/30?img=1" alt="avatar"> John McCormick</td>
+                        <td>1095 Wiesman Street, CALAMAR, IA, 52232</td>
+                        <td>01 Aug 2020</td>
+                        <td>$35.00</td>
+                        <td><span class="mind-issue">PTSD</span></td>
+                        <td>
+                            <button class="action-btn approve">Approve</button>
+                            <button class="action-btn reject">Reject</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

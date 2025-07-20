@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="COMP 2800 - ThriveSphere">
+    <title>ThriveSphere - Login</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/ThriveSphere/public/images/logo.svg">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/410249dbdb.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/ThriveSphere/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/ThriveSphere/public/css/login.css">
+    <link rel="stylesheet" type="text/css" href="/ThriveSphere/public/css/responsive.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Login Section -->
+        <main id="loginContainer">
+            <div class="login-grid">
+                <div class="login-image">
+                    <img src="/ThriveSphere/public/images/login-graphic.svg" alt="Login Graphic">
+                </div>
+
+                <div class="login-form">
+                    <section id="loginSec">
+                        <h2>Welcome Back!</h2>
+
+                        <!-- User Login Form -->
+                        <form id="loginForm">
+                            <div class="form-row">
+                                <label for="userEmail">Email Address</label>
+                                <input type="email" id="userEmail" placeholder="Email" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="userPassword">Password</label>
+                                <input type="password" id="userPassword" placeholder="Password" required>
+                            </div>
+
+                            <button type="button" id="userLoginBtn">Login</button>
+                            <p>Don't have an account? <a href="/ThriveSphere/html/sign-up.html">Sign Up</a></p>
+                            <p id="userLoginError" style="color: red;">&nbsp;</p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footerPlaceHolder">
+            <p>ThriveSphere &copy; 2025</p>
+        </footer>
+    </div>
+
+    <!-- Firebase Authentication Script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAlleLqg4df7xgFSfcXAvMnOpffRWmJMzo",
+            authDomain: "thrivesphere-2f1e0.firebaseapp.com",
+            projectId: "thrivesphere-2f1e0",
+            storageBucket: "thrivesphere-2f1e0.appspot.com",
+            messagingSenderId: "453767812123",
+            appId: "1:453767812123:web:ddfb8191d0a12cf4c6d4be",
+            measurementId: "G-CQDKZYVJ51"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById("userLoginBtn").addEventListener("click", async () => {
+            const email = document.getElementById("userEmail").value.trim();
+            const password = document.getElementById("userPassword").value;
+            const errorDisplay = document.getElementById("userLoginError");
+            errorDisplay.innerText = "";
+
+            if (!email || !password) {
+                errorDisplay.innerText = "Please enter both email and password.";
+                return;
+            }
+
+            try {
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                alert("Login successful! Welcome " + userCredential.user.email);
+                window.location.href = "/ThriveSphere/html/userprofile.html";
+            } catch (error) {
+                errorDisplay.innerText = "Login failed: " + error.message;
+            }
+        });
+    </script>
+</body>
+</html>
